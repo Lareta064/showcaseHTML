@@ -12,8 +12,11 @@ $(document).ready(function () {
 	// показать скрыть модальные окна поиска и моб меню
 	const openSearch = document.querySelector('#show-search');
 	const searchModal = document.querySelector('#search-modal');
+
 	const searchFormInput = searchModal.querySelector('form input');
 	const searchFormButton = searchModal.querySelector('form button');
+
+
 	const openMobMenu = document.querySelector('#mob-btn');
 	const mobMenu = document.querySelector('#mob-menu');
 
@@ -21,12 +24,15 @@ $(document).ready(function () {
 		e.preventDefault();
 		searchModal.classList.add('active');
 	});
+
 	searchModal.addEventListener('click', function (e) {
 		if (e.target != searchFormInput && e.target != searchFormButton) {
 			searchModal.classList.remove('active');
 		}
 
 	});
+
+
 	openMobMenu.addEventListener('click', function (e) {
 		e.preventDefault();
 		mobMenu.classList.add('active');
@@ -215,5 +221,24 @@ $(document).ready(function () {
 			e.preventDefault();
 			presentModal.classList.remove('active');
 		});
+	}
+
+	//  modal subcribe
+	const btnOpenSubscribeModal = document.querySelectorAll('[data-role="openSubscribeModal"]');
+	const btnSubscribeModalClose = document.querySelectorAll('.subscribeModal-close');
+	if (btnOpenSubscribeModal) {
+		for (let item of btnOpenSubscribeModal) {
+			item.addEventListener('click', function (e) {
+				e.preventDefault();
+				subscribeModal.classList.add('active');
+			});
+		}
+		for (let item of btnSubscribeModalClose) {
+			item.addEventListener('click', function (e) {
+				e.preventDefault();
+				subscribeModal.classList.remove('active');
+			});
+		}
+
 	}
 })

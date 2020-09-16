@@ -1,0 +1,285 @@
+/*ЭТИ СТИЛИ ДОБАВИТЬ В ОБЩИЙ ФАЙЛ  MAIN.CSS*/
+
+
+.abs-wrapper#presentModal {
+  overflow: hidden;
+  background-color: #383838;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+  display: none;
+}
+.abs-wrapper#presentModal.active {
+  -webkit-animation-name: showSlow;
+  animation-name: showSlow;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 767px) {
+  .abs-wrapper#presentModal {
+    padding: 15px;
+  }
+}
+.presentModal.active {
+  -webkit-animation-name: showSlow;
+  animation-name: showSlow;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.abs-wrapper .presentModal-content {
+  margin: auto;
+  background: #fff;
+  -webkit-box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 768px;
+  height: 570px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 767px) {
+  .abs-wrapper .presentModal-content {
+    height: 480px;
+    max-width: 420px;
+  }
+}
+.abs-wrapper .presentModal-content .btn-close {
+  right: 25px;
+  top: 25px;
+}
+@media (max-width: 767px) {
+  .abs-wrapper .presentModal-content .btn-close {
+    right: 5px;
+    top: 5px;
+  }
+}
+.presentModal-close {
+  z-index: 10;
+}
+.presentModal-wrapper {
+  text-align: center;
+  width: 100%;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.presentModal-wrapper .presentModal-top {
+  padding-top: 100px;
+  height: 430px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  border-radius: 20px;
+  overflow: hidden;
+  background-image: url(../img/modalTop@2x.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+  .presentModal-wrapper .presentModal-top {
+    padding-top: 60px;
+    background-image: none;
+    height: 340px;
+    padding-bottom: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+@media (max-width: 424px) {
+  .presentModal-wrapper .presentModal-top {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.presentModal-top__content {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 767px) {
+  .presentModal-top__content {
+    background-color: #fff;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+.presentModal-footer {
+  background-image: url(../img/modalFooter@2x.png);
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  height: 40%;
+  padding-top: 133px;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+@media (max-width: 767px) {
+  .presentModal-footer {
+    padding-top: 77px;
+  }
+}
+.presentModal-footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 767px) {
+  .presentModal-footer__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.modal-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 767px) {
+  .modal-contacts .modal-contacts__icon {
+    display: none;
+  }
+}
+.modal-contacts .modal-contacts__text {
+  margin-left: 25px;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .modal-contacts .modal-contacts__text {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
+.modal-contacts .modal-contacts__text p:first-child {
+  font-size: 20px;
+  font-weight: 600;
+  color: #040404;
+}
+@media (max-width: 767px) {
+  .modal-contacts .modal-contacts__text p:first-child {
+    font-size: 18px;
+  }
+}
+.modal-contacts .modal-contacts__text p:last-child {
+  font-size: 16px;
+  line-height: 18px;
+  color: #040404;
+}
+.presentModal-title {
+  font-size: 36px;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .presentModal-title {
+    font-size: 25px;
+  }
+}
+.presentModal-subtitle {
+  font-size: 16px;
+  line-height: 26px;
+  max-width: 470px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px;
+}
+.presentModal-subtitle .hide-mobile {
+  display: inline-block;
+}
+@media (max-width: 767px) {
+  .presentModal-subtitle .hide-mobile {
+    display: none;
+    padding-left: 5px;
+  }
+}
+.presentModalForm {
+  margin-top: 30px;
+}
+@media (max-width: 767px) {
+  .presentModalForm {
+    margin-top: auto;
+  }
+}
+.presentModalForm .form-item {
+  position: relative;
+}
+.presentModalForm .input-icon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 35px;
+  z-index: 2;
+}
+.presentModalForm input {
+  width: 100%;
+  border: 0px;
+  height: 60px;
+  border-radius: 50px;
+  background-color: #f8f8f8;
+  padding-left: 35px;
+}
+.presentModalForm input::-webkit-input-placeholder {
+  font-size: 12px;
+  color: #b2b1b1;
+}
+.presentModalForm input::-moz-placeholder {
+  font-size: 12px;
+  color: #b2b1b1;
+}
+.presentModalForm input::-ms-input-placeholder {
+  font-size: 12px;
+  color: #b2b1b1;
+}
+.presentModalForm input::placeholder {
+  font-size: 12px;
+  color: #b2b1b1;
+}
